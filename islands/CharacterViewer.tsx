@@ -57,8 +57,9 @@ const CharacterViewer: FunctionComponent<Props> = ({ data }) => {
           class="button"
           disabled={page === 1}
           onClick={() => {
-            setPage(page - 1);
-            changePage(page);
+            const newPage = page - 1;
+            setPage(newPage);
+            changePage(newPage);
           }}
         >
           Anterior
@@ -69,8 +70,9 @@ const CharacterViewer: FunctionComponent<Props> = ({ data }) => {
           class="button"
           disabled={page === data.info.pages}
           onClick={() => {
-            setPage(page + 1);
-            changePage(page);
+            const newPage = page + 1;
+            setPage(newPage);
+            changePage(newPage);
           }}
         >
           Siguiente
